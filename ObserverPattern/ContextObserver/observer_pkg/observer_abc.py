@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
-class AbsObserver(metaclass=ABCMeta):
+class AbsObserver2(metaclass=ABCMeta):
     @abstractmethod
     def update(self, value):
         pass

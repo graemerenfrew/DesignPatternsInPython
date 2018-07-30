@@ -1,8 +1,7 @@
+from abc import ABCMeta, abstractmethod
+from observer_abc import AbsObserver2
 
-from abc import ABCMeta
-from observer_abc import AbsObserver
-
-class AbsSubject(metaclass=ABCMeta):
+class AbsSubject2(metaclass=ABCMeta):
     _observers = set()  #create a private set for storing the references to observers
 
     ''' We actually code an implementation here!  
@@ -10,7 +9,7 @@ class AbsSubject(metaclass=ABCMeta):
     '''
 
     def attach(self, observer):
-        if not isinstance(observer, AbsObserver):
+        if not isinstance(observer, AbsObserver2):
             raise TypeError("This Observer object was not derived from AbsObserver")
         self._observers |= {observer} #append into the set
 
