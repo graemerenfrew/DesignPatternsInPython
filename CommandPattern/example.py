@@ -3,3 +3,7 @@ class MyClass:
 
     def f(self):
         return "hello world"
+
+m = MyClass()
+r = m.f()
+print(r)
