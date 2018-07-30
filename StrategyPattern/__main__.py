@@ -6,7 +6,7 @@ from usps_strategy import USPSStrategy
 
 # test the methods
 order = Order()
-strategy = FedExStrategy()
+strategy = FedExStrategy()  #we are using a concrete strategy object
 cost_calculator = ShippingCost(strategy)
 cost = cost_calculator.shipping_cost(order)
 assert cost == 3.0
@@ -22,3 +22,5 @@ strategy = USPSStrategy()
 cost_calculator = ShippingCost(strategy)
 cost = cost_calculator.shipping_cost(order)
 assert cost == 5.0
+
+print('Tests passed')
