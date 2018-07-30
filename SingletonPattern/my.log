@@ -1,2 +1,4 @@
-2018-07-30 16:32:11.289796 writing a log with the classic singleton pattern
-2018-07-30 16:32:11.289874 ****
+2018-07-30 16:48:41.992659: Logging with classic Singleton pattern
+
+2018-07-30 16:48:41.992763: Another log record
+
