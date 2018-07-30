@@ -1,4 +1,4 @@
-from observer import AbsSubject
+from observer_pkg.subject_abc import AbsSubject
 
 class KPIs(AbsSubject):
     _open_tickets = -1
@@ -11,7 +11,7 @@ class KPIs(AbsSubject):
 
     @property
     def closed_tickets(self):
-        return self.
+        return self._closed_tickets
 
     @property
     def new_tickets(self):

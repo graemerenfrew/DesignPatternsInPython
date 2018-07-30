@@ -1,4 +1,4 @@
-from observer import AbsObserver
+from observer_pkg.observer_abc import AbsObserver
 
 class CurrentKPIs(AbsObserver):
     open_tickets = -1

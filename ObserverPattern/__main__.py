@@ -1,10 +1,15 @@
-from kpi_data import KPI_Data
+from kpis import KPIs
+from currentkpis import CurrentKPIs
+from forecastkpis import ForecastKPIs
 
-#report on the current kpi values
-for kpi in KPI_Data:
-    if kpi.name == 'open':
-        print('Current open tickets: %s ' % kpi.value)
-    elif kpi.name == 'new':
-        print("New tickets in last hr: %s " % kpi.value)
-    elif kpi.name == "closed":
-        print("Closed tix in last hr: %s " % kpi.value)
+#report on the current KPIs
+kpis = KPIs()
+currentKPIs = CurrentKPIs(kpis)
+forecastKPIs = ForecastKPIs(kpis)
+kpis.set_kpis(25, 10, 5)
+kpis.set_kpis(100, 50, 3)
+kpis.set_kpis(50, 10, 20)
+
+print("\n***Detaching current KPI observer***\n\n")
+kpis.detach(currentKPIs)
+kpis.set_kpis(150, 110, 120)

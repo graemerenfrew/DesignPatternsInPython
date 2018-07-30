@@ -1,5 +1,6 @@
-from abc import ABCMeta, abstractmethod
-from observer import AbsObserver
+
+from abc import ABCMeta
+from observer_pkg.observer_abc import AbsObserver
 
 class AbsSubject(metaclass=ABCMeta):
     _observers = set()  #create a private set for storing the references to observers
