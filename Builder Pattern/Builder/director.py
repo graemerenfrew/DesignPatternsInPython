@@ -1,9 +1,7 @@
 class Director(object):
-
-
     ''' The client will pass in the builder it wants to use, and this director will go
     and do all the steps in the correct order, using what ever builder it is sent'''
-    def __init__(self):
+    def __init__(self, builder):
         self._builder = builder
 
     def build_computer(self):

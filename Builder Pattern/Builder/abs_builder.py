@@ -1,7 +1,7 @@
 import abc
 from computer import Computer
 
-class AbsBuilder(object)
+class AbsBuilder(object):
     __metaclass__ = abc.ABCMeta
 
     ''' Implement the get and new methods in the abstract base clase
