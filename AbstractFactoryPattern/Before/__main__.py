@@ -12,15 +12,20 @@ print(edition)
 
 if maker == 'gm':
     if edition == 'Economy':
-        car = 'GMShiteo'
+        car = GMShiteo()
     elif edition == 'Sport':
-        car = 'GMMega'
+        car = GMMega()
     else:
         raise ValueError('Unknown car')
 elif maker == 'ford':
     if edition == 'Economy':
-        car = 'FordFiesta'
+        car = FordFiesta()
     elif edition == 'Sport':
-        car = 'FordMustang'
+        car = FordMustang()
     else:
         raise ValueError('Unknown car')
+else:
+    raise ValueError("Unknown maker.")
+
+car.start()
+car.stop()
